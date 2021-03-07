@@ -1,16 +1,24 @@
 import React from 'react'
 import { messageProps } from './HW1'
-
-
+import s from './Message.module.css'
 
 
 function Message(props:messageProps) {
     return (
-        <div>
-            <img src={props.avatar} alt=""/>
-            <div>{props.name}</div>
-            <div>{props.message}</div>
-            <div>{props.time}</div>
+        <div className={s.wrapper}>
+
+            <div className={s.message}>
+                <img src={props.avatar} alt="" className={s.image}/>
+                <div className={s.info}>
+                    <div className={s.name}>{props.name}</div>
+                    <div className={s.messageText}>{props.message}</div>
+                    <div className={s.time}>{props.time}</div>
+                </div>
+
+
+
+            </div>
+
         </div>
     )
 }
