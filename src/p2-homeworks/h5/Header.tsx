@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import HW1 from "../h1/HW1";
+import s from './header.module.css'
 
 function Header() {
     return (
-        <div>
+        <div className={s.header}>
            <div>
                <NavLink to='/HW1'> Homework 1 - Message</NavLink>
            </div>
