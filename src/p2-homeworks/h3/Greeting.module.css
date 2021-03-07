@@ -1,0 +1,16 @@
+.greeting {
+    display: flex;
+    align-items: flex-start;
+}
+.secsess {
+    border: 1px solid lightgreen;
+}
+
+.error {
+    border: 1px solid red;
+    color: red;
+    height: 21px;
+}
+.input:focus {
+    outline: none;
+}

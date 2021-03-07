@@ -1,0 +1,17 @@
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: aqua;
+}
+.checkbox:checked {
+    appearance: none;
+    background: pink;
+}
+.checkbox:focus {
+    outline: none;
+}
+
+.spanClassName {
+
+}
