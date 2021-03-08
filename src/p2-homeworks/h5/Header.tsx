@@ -10,23 +10,15 @@ function Header() {
             <div className={s.navBarCircle} onClick={()=>setCollapsed(!collapsed)}>
                 {collapsed &&  <Navbar />}
             </div>
-           <div>
-               <NavLink to='/HW1'> Homework 1 - Message</NavLink>
-           </div>
+
             <div>
-                <NavLink to='/HW2'> Homework 2 - Affairs</NavLink>
+                <NavLink to='/pre-junior'> Pre-junior</NavLink>
             </div>
             <div>
-                <NavLink to='/HW3'> Homework 3 - Greeting</NavLink>
+                <NavLink to='/junior'> Junior</NavLink>
             </div>
             <div>
-                <NavLink to='/HW4'> Homework 4 - Buttons/Inputs</NavLink>
-            </div>
-            <div>
-                <NavLink to='/HW6'> Homework 6 - span/text </NavLink>
-            </div>
-            <div>
-                <NavLink to='/pre-junior'> Home</NavLink>
+                <NavLink to='/juniorPlus'> Junior+</NavLink>
             </div>
         </div>
     )
