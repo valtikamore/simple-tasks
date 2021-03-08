@@ -5,8 +5,6 @@ import s from './Message.module.css'
 
 function Message(props:messageProps) {
     return (
-        <div className={s.wrapper}>
-
             <div className={s.message}>
                 <img src={props.avatar} alt="" className={s.image}/>
                 <div className={s.info}>
@@ -14,12 +12,7 @@ function Message(props:messageProps) {
                     <div className={s.messageText}>{props.message}</div>
                     <div className={s.time}>{props.time}</div>
                 </div>
-
-
-
             </div>
-
-        </div>
     )
 }
 

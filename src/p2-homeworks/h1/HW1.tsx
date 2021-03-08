@@ -1,5 +1,6 @@
 import React from 'react'
 import Message from "./Message";
+import s from "./Message.module.css";
 
 
 
@@ -20,15 +21,13 @@ const messageData = {
 
 function HW1() {
     return (
-        <div>
-
+        <div className={s.wrapper}>
             <Message
                 avatar={messageData.avatar}
                 name={messageData.name}
                 message={messageData.message}
                 time={messageData.time}
             />
-
             {/*<AlternativeMessage/>*/}
         </div>
     )

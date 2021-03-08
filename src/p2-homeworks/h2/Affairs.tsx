@@ -25,16 +25,11 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <div className={s.wrapper}>
-            <div>
                 {mappedAffairs}
-
                 <button onClick={setAll}>All</button>
                 <button onClick={setHigh}>High</button>
                 <button onClick={setMiddle}>Middle</button>
                 <button onClick={setLow}>Low</button>
-            </div>
-
-
         </div>
     )
 }

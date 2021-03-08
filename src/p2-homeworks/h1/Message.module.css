@@ -1,14 +1,8 @@
-.wrapper {
-    display: grid;
-    place-items: center;
-    margin-top: 100px;
-}
+
 
 .message {
     display: flex;
     align-items: flex-end;
-
-
 
 }
 .image {

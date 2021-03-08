@@ -1,0 +1,7 @@
+.navbar {
+    position: absolute;
+    z-index: 10;
+    background: lightyellow;
+    animation: ease 0.2s;
+    height: 100vh;
+}

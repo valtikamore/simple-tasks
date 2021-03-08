@@ -8,7 +8,7 @@ import HW6 from '../../h6/HW6'
 
 function PreJunior() {
     return (
-        <div className={s.flex}>
+        <div className={s.grid}>
             <HW1/>
             <HW2/>
             <HW3/>
