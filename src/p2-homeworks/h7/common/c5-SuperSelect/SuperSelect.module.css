@@ -1,0 +1,25 @@
+
+.select {
+    width: 100px;
+    padding: 5px;
+    appearance: none;
+    border: 2px inset darkgrey;
+    color: black;
+}
+.select:focus {
+    outline: none;
+    border: 2px solid aquamarine;
+}
+.option {
+    color: black;
+    background: aquamarine;
+}
+.option:checked {
+    color: black;
+    background: aquamarine;
+}
+.option:hover {
+    box-shadow: 0 0 10px 100px yellow inset;
+    transition: all .2s ease-in-out;
+    background: red;
+}

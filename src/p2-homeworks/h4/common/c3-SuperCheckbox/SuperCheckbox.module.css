@@ -2,14 +2,14 @@
     appearance: none;
     width: 20px;
     height: 20px;
-    background: aqua;
+    background: darkred;
 }
 .checkbox:checked {
     appearance: none;
     background: pink;
 }
 .checkbox:focus {
-    outline: none;
+    outline: lightgreen solid 1px ;
 }
 
 .spanClassName {

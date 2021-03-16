@@ -16,7 +16,7 @@ function HW8() {
 
     const finalPeople = people.map(p => (
         <div key={p._id}>
-            some name, age
+            {`${p.name} ${p.age} `}
         </div>
     ))
 
@@ -24,10 +24,6 @@ function HW8() {
 
     return (
         <div>
-            <hr/>
-            homeworks 8
-
-            {/*should work (должно работать)*/}
 
             {finalPeople}
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
@@ -35,10 +31,7 @@ function HW8() {
 
             check 18
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
-            <hr/>
+
         </div>
     );
 }

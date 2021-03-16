@@ -1,13 +1,13 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    background: lightyellow;
-    left: 0;
-    bottom: 0;
-    transition: all .2s linear;
-    /*transform: translateX(-100%);*/
-}
+/*.navbar {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    z-index: 10;*/
+/*    background: black;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    transition: all .2s linear;*/
+/*    transform: translateX(-10%);*/
+/*}*/
 
 /*display: flex;*/
 /*justify-content: center;*/

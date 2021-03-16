@@ -1,9 +1,13 @@
 
 
 
-
+.input {
+    border-radius: 10px;
+    border: none;
+}
 .greeting {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
 }
 .secsess {
@@ -11,9 +15,9 @@
 }
 
 .error {
-    border: 1px solid red;
-    color: red;
+    border: 2px solid red;
     height: 21px;
+    background: coral;
 }
 .input:focus {
     outline: none;

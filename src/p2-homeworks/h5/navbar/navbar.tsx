@@ -6,6 +6,7 @@ import s from  './navbar.module.css'
 export function Navbar () {
     return (
         <div className={s.navbar}>
+            <div></div>
             <div>
                 <NavLink to='/HW1'> Message</NavLink>
             </div>

@@ -1,12 +1,36 @@
 
-.header {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.link {
+    text-decoration: none;
+    color: black;
 }
-.navBarCircle {
-    height: 40px;
-    width: 40px;
-    background: cyan;
-    border-radius: 50%;
+
+.link:hover {
+    color: magenta;
+}
+
+.active {
+    color: magenta;
+}
+
+.block {
+    width: 25px;
+    height: 21px;
+    background: burlywood;
+}
+
+.header {
+
+}
+
+.worksBlockLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    transition-duration: 500ms;
+    transform: translate(-240px);
+}
+.worksBlockLink:hover {
+    transition-duration: 500ms;
+    transform: translate(0);
 }
