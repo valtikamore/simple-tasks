@@ -1,7 +1,7 @@
 import React from 'react';
 import {homeWorkReducer} from "../homeWorkReducer";
 
-let initialState: any[];
+let initialState: {_id:number,name:string,age:number}[];
 
 beforeEach(() => {
     initialState = [
@@ -18,15 +18,15 @@ test("sort name up", () => {
     const newState = homeWorkReducer(initialState, {type: "sort", payload: "up"});
 
     console.log(newState);
-    // expect(...).toBe(...);
+    expect(newState[1].name).toBe('Александр')
 });
 test("sort name down", () => {
     const newState = homeWorkReducer(initialState, {type: "sort", payload: "down"});
-
+    expect(newState[0].name).toBe('Кот')
 
 });
 test("check age 18", () => {
     const newState = homeWorkReducer(initialState, {type: "check", payload: 18});
 
-
+    expect(newState[0].age).toBe(66)
 });
