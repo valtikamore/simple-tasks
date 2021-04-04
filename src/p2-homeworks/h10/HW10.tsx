@@ -13,10 +13,6 @@ function HW10() {
 
     return (
         <div>
-            <hr/>
-            homeworks 10
-
-            {/*should work (должно работать)*/}
             {loading
                 ? (
                     <div>крутилка...</div>
@@ -26,11 +22,6 @@ function HW10() {
                     </div>
                 )
             }
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
-            <hr/>
         </div>
     );
 }
