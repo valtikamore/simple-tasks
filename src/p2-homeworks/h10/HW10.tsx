@@ -1,7 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 function HW10() {
+    const dispatch  = useDispatch()
     // useSelector, useDispatch
     const loading = false;
 
