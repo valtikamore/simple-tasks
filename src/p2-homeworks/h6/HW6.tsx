@@ -3,6 +3,7 @@ import SuperEditableSpan from "./common/c4-SuperEditableSpan/SuperEditableSpan";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {restoreState, saveState} from "./localStorage/localStorage";
 import s from './HW6.module.css'
+import classes from '../h5/pages/preJunior.module.css'
 
 function HW6() {
     const [value, setValue] = useState<string>("");
@@ -15,7 +16,7 @@ function HW6() {
     };
 
     return (
-        <div className={s.hw6}>
+        <div className={`${s.hw6} ${classes.item}`} >
                 <SuperEditableSpan
                     value={value}
                     onChangeText={setValue}

@@ -8,11 +8,12 @@ import HW7 from "../../h7/HW7";
 import HW8 from "../../h8/HW8";
 import HW9 from "../../h9/HW9";
 import HW10 from "../../h10/HW10";
-
+import HW11 from "../../h11/HW11";
+import classes from './preJunior.module.css'
 
 function PreJunior() {
     return (
-        <div >
+        <div className={classes.items}>
             <HW1/>
             <HW2/>
             <HW3/>
@@ -22,6 +23,7 @@ function PreJunior() {
             <HW8/>
             <HW9/>
             <HW10/>
+            <HW11/>
         </div>
     )
 }

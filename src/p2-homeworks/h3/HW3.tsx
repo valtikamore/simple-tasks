@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import GreetingContainer from './GreetingContainer'
 import { v1 } from 'uuid'
 import s from './Greeting.module.css'
-
+import classes from '../h5/pages/preJunior.module.css'
 // types
 export type UserType = {
     _id: string // need to fix any
@@ -22,7 +22,7 @@ function HW3() {
     }
 
     return (
-        <div className={s.wrapper}>
+        <div className={`${s.wrapper}${classes.item}`}>
             <div>
                 <GreetingContainer users={users} addUserCallback={addUserCallback}/>
             </div>

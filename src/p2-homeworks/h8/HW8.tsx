@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import classes from '../h5/pages/preJunior.module.css'
 
 export type initialState =  {_id:number,name:string,age:number}[];
 
@@ -27,7 +28,7 @@ function HW8() {
     const checkEighteen = () => setPeople(homeWorkReducer(initialPeople, {type: "check", payload:18}))
 
     return (
-        <div>
+        <div className={classes.item}>
             {finalPeople}
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
             <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>

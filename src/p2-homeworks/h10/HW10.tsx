@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {loadingAC} from "./bll/loadingReducer";
 import {AppStoreType} from "./bll/store";
-
+import classes from '../h5/pages/preJunior.module.css'
 function HW10() {
     const dispatch  = useDispatch()
     const isLoading = useSelector<AppStoreType,boolean>(state => state.loading.loading)
@@ -20,7 +20,7 @@ function HW10() {
     };
 
     return (
-        <div>
+        <div className={classes.item}>
             {isLoading
                 ? (
                     <div>крутилка...</div>
