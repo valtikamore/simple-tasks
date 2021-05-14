@@ -24,7 +24,7 @@ const handleChange  = (event: React.ChangeEvent<{}>, value: (number | number[]))
         <Slider
             style={{
                 color:"grey",
-                width:500
+                width:200
             }}
             value={value}
             onChange={handleChange}

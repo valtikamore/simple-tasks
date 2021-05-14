@@ -26,9 +26,8 @@ function HW11() {
                 <span>{value1}</span>
                 <SuperDoubleRange
                     value={[value1, value2]}
-                    onChangeRange={onChangeRange}
-
-                />
+                    onChangeRange={onChangeRange}/>
+                <span>{value2}</span>
             </div>
 
         </div>
