@@ -1,8 +1,8 @@
-.dark {
-    background: dimgrey;
+.blue {
+    background: #6ed4c9;
 }
 
-.dark-text {
+.blue-text {
     color: aliceblue;
 }
 
@@ -11,13 +11,20 @@
 }
 
 .red-text {
-    color: aqua;
+    color: aliceblue;
 }
 
-.some {
+.green {
     background: lightgreen;
 }
 
-.some-text {
-    color: darkslateblue;
+.green-text {
+    color: aliceblue;
+}
+.yellow {
+    background: #f3ea99;
+}
+
+.yellow-text {
+    color: #e35b27;
 }

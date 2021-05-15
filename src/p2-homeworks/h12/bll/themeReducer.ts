@@ -1,18 +1,28 @@
+export type ThemeStateType = {
+    theme: string,
+    themes: Array<string>
+}
 
-const initState = {
-    theme:'dark'|'red'|'some'
+export  const initThemeState: ThemeStateType = {
+    theme: 'blue',
+    themes: ['blue', 'red', 'green']
 };
-type initialStateType = typeof initState
 
-export type themeReducerActionTypes = ReturnType<typeof changeThemeC>
-
-
-export const themeReducer = (state:initialStateType = initState, action: themeReducerActionTypes): initialStateType => {
+export const themeReducer = (state:ThemeStateType =  initThemeState, action: ChangeActionType): ThemeStateType => { // fix any
     switch (action.type) {
-        case "THEME/RESELECT-THEME": {
-            return {...state,theme: action.color}
+        case 'CHANGE_COLOR': {
+            return {
+                ...state,
+                theme: action.theme
+            };
         }
-        default: return state;
+        default:
+            return state;
     }
 };
-export const changeThemeC = (color:string) => ({type:'THEME/RESELECT-THEME',color})
+
+type ChangeActionType = {
+    type: 'CHANGE_COLOR',
+    theme: string
+}
+export const changeThemeAC = (theme: string): ChangeActionType => ({type: 'CHANGE_COLOR', theme})

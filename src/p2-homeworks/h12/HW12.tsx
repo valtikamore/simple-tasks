@@ -1,35 +1,36 @@
-import React, {useState} from "react";
-import s from "./HW12.module.css";
-import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
-import {useDispatch, useSelector} from "react-redux";
-import {changeThemeC} from "./bll/themeReducer";
-import {AppStoreType} from "../h10/bll/store";
+import React from 'react';
+import s from './HW12.module.css';
+import SuperRadio from '../h7/common/c6-SuperRadio/SuperRadio';
+import {useDispatch, useSelector} from 'react-redux';
+import {AppStoreType} from '../h10/bll/store';
+import {changeThemeAC, ThemeStateType} from './bll/themeReducer';
 
 
 
 function HW12() {
-
-
-    const theme = useSelector<AppStoreType,'dark'|'red'|'some'>(state => state.theme.theme)
-
-    const themes = ['dark', 'red', 'some'];
-
-    const [value, onChangeOption] = useState(themes);
-    
+    const state =useSelector<AppStoreType, ThemeStateType>(state => state.theme)
     const dispatch = useDispatch()
 
-    const onChangeCallback = (e:any) => {
-        dispatch(changeThemeC(e.currentTarget.value))
+    // useDispatch, onChangeCallback
+    const onChangeCallback=(theme:string)=>{
+        dispatch(changeThemeAC(theme))
     }
 
     return (
-        <div className={s[theme]}>
-
-            <span className={s[theme + '-text']}>
+        <div className={s[state.theme]}>
+            <hr/>
+            <span className={s[state.theme + '-text']}>
                 homeworks 12
             </span>
-          <SuperSelect options={themes} onChangeOption={onChangeCallback} value={themes[1]}   />
+            <SuperRadio
+                options={state.themes}
+                value={state.theme}
+                onChangeOption={onChangeCallback}
+            />
+            {/*should work (должно работать)*/}
+            {/*SuperSelect or SuperRadio*/}
 
+            <hr/>
         </div>
     );
 }
