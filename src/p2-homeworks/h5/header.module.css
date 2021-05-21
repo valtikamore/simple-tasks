@@ -1,7 +1,37 @@
+.header{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.header__linkGroup {
+    display: flex;
+}
+.header__linkGroup:hover {
+    transform: translateY(-220px);
+}
 
+
+.block {
+    display: inline-block;
+    color: lightyellow;
+    padding: 15px;
+    height: 20px;
+    background: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header__linkGroup * {
+    margin-left: 10px;
+}
+
+.header__linkGroup:first-child {
+    margin-left: 0;
+}
 .link {
     text-decoration: none;
     color: black;
+
 }
 
 .link:hover {
@@ -12,25 +42,3 @@
     color: magenta;
 }
 
-.block {
-    width: 25px;
-    height: 21px;
-    background: burlywood;
-}
-
-.header {
-
-}
-
-.worksBlockLink {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    transition-duration: 500ms;
-    transform: translate(-240px);
-}
-.worksBlockLink:hover {
-    transition-duration: 500ms;
-    transform: translate(0);
-}

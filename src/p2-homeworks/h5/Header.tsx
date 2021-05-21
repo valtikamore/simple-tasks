@@ -1,20 +1,21 @@
-import React, {useState} from 'react'
+import React, {MouseEventHandler, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './header.module.css'
-import {Navbar} from "./navbar/navbar";
 import {PATH} from "./Routes";
 
 function Header() {
-    const [collapsed,setCollapsed]=useState<boolean>(false)
+    const [state, setState] = useState(true);
+
     return (
         <div className={s.header}>
-            <div className={s.worksBlockLink}>
+            {state ?  <div className={s.block} onClick={()=>setState(prevState => prevState = false )}> hide</div> :  <div className={s.block} onClick={()=>setState(prevState => prevState = true )}> show</div>}
+
+            {state &&  <div className={s.header__linkGroup}>
                 <NavLink to={PATH.PRE_JUNIOR} activeClassName={s.active} className={s.link}> Pre-junior</NavLink>
                 <NavLink to={PATH.JUNIOR} activeClassName={s.active} className={s.link}> Junior</NavLink>
                 <NavLink to={PATH.JUNIOR_PLUS} activeClassName={s.active} className={s.link}> Junior+</NavLink>
-                <div className={s.block} >
-                </div>
-            </div>
+            </div>  }
+
         </div>
     )
 }{/*onClick={() => setCollapsed(!collapsed)}*/}
