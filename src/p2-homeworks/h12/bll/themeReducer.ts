@@ -5,10 +5,10 @@ export type ThemeStateType = {
 
 export  const initThemeState: ThemeStateType = {
     theme: 'blue',
-    themes: ['blue', 'red', 'green']
+    themes: ['blue', 'red', 'green','yellow']
 };
 
-export const themeReducer = (state:ThemeStateType =  initThemeState, action: ChangeActionType): ThemeStateType => { // fix any
+export const themeReducer = (state:ThemeStateType =  initThemeState, action: ThemeReducerActionTypes): ThemeStateType => {
     switch (action.type) {
         case 'CHANGE_COLOR': {
             return {
@@ -20,9 +20,6 @@ export const themeReducer = (state:ThemeStateType =  initThemeState, action: Cha
             return state;
     }
 };
-
-type ChangeActionType = {
-    type: 'CHANGE_COLOR',
-    theme: string
-}
-export const changeThemeAC = (theme: string): ChangeActionType => ({type: 'CHANGE_COLOR', theme})
+type ThemeReducerActionTypes = |  changeThemeActionType
+type changeThemeActionType = ReturnType<typeof changeThemeAC>
+export const changeThemeAC = (theme: string) => ({type: 'CHANGE_COLOR', theme})

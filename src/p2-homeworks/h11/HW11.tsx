@@ -5,17 +5,20 @@ import classes from "../h5/pages/preJunior.module.css";
 
 function HW11() {
     const [value1, setValue1] = useState(0);
-    const [value2, setValue2] = useState(100);
+
+    const [value2, setValue2] = useState(0);
+    const [value3, setValue3] = useState(100);
+
     const onChangeRange = (value: number | number[]) => {
         if (Array.isArray(value)) {
-            setValue1(value[0])
-            setValue2(value[1])
+            setValue2(value[0])
+            setValue3(value[1])
         }
     }
     return (
         <div className={classes.item}>
             <div>
-                <span>{value1}</span>
+                <div style={{display:'inline-block' , width:'10px',marginRight:'10px'}}>{value1}</div>
                 <SuperRange
                    value1={value1}
                    onChangeRange={setValue1}
@@ -23,11 +26,11 @@ function HW11() {
             </div>
 
             <div>
-                <span>{value1}</span>
+                <div style={{display:'inline-block' , width:'10px',marginRight:'10px'}}>{value2}</div>
                 <SuperDoubleRange
-                    value={[value1, value2]}
+                    value={[value2, value3]}
                     onChangeRange={onChangeRange}/>
-                <span>{value2}</span>
+                <div style={{display:'inline-block' , width:'10px',marginRight:'10px'}}>{value3}</div>
             </div>
 
         </div>

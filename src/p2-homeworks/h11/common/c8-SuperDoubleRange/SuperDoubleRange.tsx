@@ -10,6 +10,7 @@ type SuperDoubleRangePropsType = {
 function valuetext(value: number) {
     return `${value}`;
 }
+
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value,
@@ -24,7 +25,7 @@ const handleChange  = (event: React.ChangeEvent<{}>, value: (number | number[]))
         <Slider
             style={{
                 color:"grey",
-                width:200
+                width:150
             }}
             value={value}
             onChange={handleChange}

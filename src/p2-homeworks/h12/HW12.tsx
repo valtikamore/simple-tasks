@@ -8,17 +8,16 @@ import {changeThemeAC, ThemeStateType} from './bll/themeReducer';
 
 
 function HW12() {
-    const state =useSelector<AppStoreType, ThemeStateType>(state => state.theme)
+
+    const state = useSelector<AppStoreType, ThemeStateType>(state => state.theme)
     const dispatch = useDispatch()
 
-    // useDispatch, onChangeCallback
     const onChangeCallback=(theme:string)=>{
         dispatch(changeThemeAC(theme))
     }
 
     return (
         <div className={s[state.theme]}>
-            <hr/>
             <span className={s[state.theme + '-text']}>
                 homeworks 12
             </span>
@@ -27,10 +26,6 @@ function HW12() {
                 value={state.theme}
                 onChangeOption={onChangeCallback}
             />
-            {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
-
-            <hr/>
         </div>
     );
 }
